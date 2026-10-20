@@ -6,7 +6,7 @@
 [![PHP 8.3+](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net)
 [![Laravel 13](https://img.shields.io/badge/Laravel-13-FF2D20?logo=laravel&logoColor=white)](https://laravel.com)
 [![Filament 5](https://img.shields.io/badge/Filament-5-FDAE4B)](https://filamentphp.com)
-[![License: MIT](https://img.shields.io/packagist/l/shipaurora/aurora)](https://opensource.org/license/mit)
+[![License: MIT](https://img.shields.io/packagist/l/shipaurora/aurora)](LICENSE)
 
 **The starter app for a new website on [Aurora](https://shipaurora.com)**, a content management
 system for Laravel, built on Filament. It's a Laravel application with the CMS already installed,
@@ -62,4 +62,4 @@ the APIs and configuration) is in the documentation at
 
 ## License
 
-Aurora is open-source software licensed under the MIT license.
+Aurora is open-source software licensed under the [MIT license](LICENSE).
