@@ -2,6 +2,12 @@
 
 # Aurora
 
+[![Latest version](https://img.shields.io/packagist/v/shipaurora/aurora)](https://packagist.org/packages/shipaurora/aurora)
+[![PHP 8.3+](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net)
+[![Laravel 13](https://img.shields.io/badge/Laravel-13-FF2D20?logo=laravel&logoColor=white)](https://laravel.com)
+[![Filament 5](https://img.shields.io/badge/Filament-5-FDAE4B)](https://filamentphp.com)
+[![License: MIT](https://img.shields.io/packagist/l/shipaurora/aurora)](https://opensource.org/license/mit)
+
 **The starter app for a new website on [Aurora](https://shipaurora.com)**, a content management
 system for Laravel, built on Filament. It's a Laravel application with the CMS already installed,
 ready to make your own: editors build pages in a visual editor on the real design, and the website
@@ -18,15 +24,16 @@ stays plain Laravel code.
 ## Create a site
 
 ```bash
-composer create-project shipaurora/aurora my-site && cd my-site
-php artisan aurora:install
-npm install && npm run build
+composer create-project shipaurora/aurora my-site   # ends by running aurora:install
+cd my-site && npm install && npm run build
 ```
 
-`aurora:install` sets up the database and what the CMS needs, and creates your admin account. Say
-yes when it offers to run the website's own seeders: that publishes the first homepage. Then open
-the site (with [Laravel Herd](https://herd.laravel.com), `http://my-site.test`; otherwise
-`php artisan serve`) and sign in at `/admin`.
+`create-project` ends by running `php artisan aurora:install`, which sets up the database and what
+the CMS needs and creates your admin account. Say yes when it offers to run the website's own
+seeders: that publishes the first homepage. (Without a terminal to answer in, for example with
+`--no-interaction`, it tells you to run `php artisan aurora:install` yourself.) Then open the site
+(with [Laravel Herd](https://herd.laravel.com), `http://my-site.test`; otherwise `php artisan serve`)
+and sign in at `/admin`.
 
 ## What's in it
 
