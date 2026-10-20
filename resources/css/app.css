@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/*
+ * The page itself, here rather than on <body>, so the visual editor's canvas (which shows this
+ * stylesheet, scoped to it) has it too.
+ */
+@layer base {
+    body {
+        @apply bg-[#FDFDFC] font-sans text-[#1b1b18] antialiased;
+    }
+}
+
+/* ── The site's header and footer (resources/views/vendor/aurora/layouts) ── */
+
+/* The page fills the window: header at the top, footer at the bottom. */
+.site {
+    @apply flex min-h-screen flex-col;
+}
+
+.site > main {
+    @apply flex-1;
+}
+
+.site-header,
+.site-footer {
+    @apply mx-auto flex w-full max-w-5xl items-center justify-between gap-6 px-6;
+}
+
+.site-header {
+    @apply py-6 text-sm;
+}
+
+/* The landing page layout's header floats over the first block, in white. */
+.site-header.is-floating {
+    @apply absolute inset-x-0 top-0 z-10 max-w-none text-white;
+}
+
+.site-header.is-floating a {
+    @apply text-white;
+}
+
+.site-header nav ul {
+    @apply flex list-none gap-6 p-0;
+}
+
+.site-header a {
+    @apply text-[#1b1b18] no-underline;
+}
+
+.site-brand {
+    @apply flex items-center gap-3 font-semibold;
+}
+
+.site-brand img {
+    @apply size-8 rounded-[9px];
+}
+
+.site-footer {
+    @apply py-10 text-sm text-[#706f6c];
+}
+
+/*
+ * ── Blocks ──────────────────────────────────────────────────────────────
+ * The page builder's blocks, in this site's look. Buttons are small and black; give a button
+ * the CSS class "is-secondary" (its design options in the visual editor) for an outline one.
+ */
+
+.fpb-el .fpb-button {
+    @apply mx-0 my-0 whitespace-nowrap rounded-sm border border-black bg-[#1b1b18] px-3.5 py-1.5 sm:px-5 text-sm leading-normal text-white transition hover:bg-black;
+}
+
+.fpb-el.is-secondary .fpb-button {
+    @apply border-[#19140035] bg-transparent text-[#1b1b18] hover:border-[#1915014a] hover:bg-transparent;
+}
+
+/*
+ * ── The Welcome block (app/Blocks/WelcomeBlock.php) ────────────────────
+ * Its look is Tailwind's classes in its view (resources/views/components/blocks/welcome.blade.php);
+ * only its two backgrounds, the night sky of Aurora's sign-in page and the glow behind the
+ * mark, are here.
+ */
+
+.welcome-sky {
+    background-color: #07061a;
+    background-image:
+        radial-gradient(70rem 40rem at 12% 0%, rgb(124 58 237 / 0.6), transparent 62%),
+        radial-gradient(55rem 35rem at 96% 12%, rgb(34 211 238 / 0.38), transparent 62%),
+        radial-gradient(60rem 40rem at 50% 118%, rgb(232 121 249 / 0.28), transparent 62%),
+        linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+    background-size: auto, auto, auto, 40px 40px, 40px 40px;
+}
+
+.welcome-glow {
+    background-image:
+        radial-gradient(60% 60% at 30% 20%, rgb(124 58 237 / 0.18), transparent 70%),
+        radial-gradient(50% 50% at 80% 90%, rgb(34 211 238 / 0.2), transparent 70%);
+}
