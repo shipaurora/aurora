@@ -52,6 +52,7 @@ and sign in at `/admin`.
 - Edit the homepage in the visual editor, or replace it with blocks of your own.
 - Add a block with `php artisan aurora:make-block "Pricing table"`.
 - Make the layouts in `resources/views/vendor/aurora/layouts` look like your website.
+- Add a layout of your own with `php artisan make:aurora-layout "Campaign"`.
 - Add people with `php artisan make:aurora-user`, choosing each one's role.
 
 ## Documentation
