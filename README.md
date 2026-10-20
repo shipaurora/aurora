@@ -24,12 +24,13 @@ stays plain Laravel code.
 ## Create a site
 
 ```bash
-composer create-project shipaurora/aurora my-site   # ends by running aurora:install
-cd my-site && npm install && npm run build
+composer create-project shipaurora/aurora my-site   # asks a few questions and sets it all up
+cd my-site
 ```
 
 `create-project` ends by running `php artisan aurora:install`, which sets up the database and what
-the CMS needs and creates your admin account. Say yes when it offers to run the website's own
+the CMS needs, creates your admin account, and builds the website's front end (`npm install` and
+`npm run build`; Node.js is needed for that). Say yes when it offers to run the website's own
 seeders: that publishes the first homepage. (Without a terminal to answer in, for example with
 `--no-interaction`, it tells you to run `php artisan aurora:install` yourself.) Then open the site
 (with [Laravel Herd](https://herd.laravel.com), `http://my-site.test`; otherwise `php artisan serve`)
