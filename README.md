@@ -3,6 +3,7 @@
 # Aurora
 
 [![Latest version](https://img.shields.io/packagist/v/shipaurora/aurora)](https://packagist.org/packages/shipaurora/aurora)
+[![Tests](https://github.com/shipaurora/aurora/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/shipaurora/aurora/actions/workflows/tests.yml)
 [![PHP 8.3+](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net)
 [![Laravel 13](https://img.shields.io/badge/Laravel-13-FF2D20?logo=laravel&logoColor=white)](https://laravel.com)
 [![Filament 5](https://img.shields.io/badge/Filament-5-FDAE4B)](https://filamentphp.com)
