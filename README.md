@@ -4,7 +4,7 @@
 
 [![Latest version](https://img.shields.io/packagist/v/shipaurora/aurora)](https://packagist.org/packages/shipaurora/aurora)
 [![Tests](https://github.com/shipaurora/aurora/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/shipaurora/aurora/actions/workflows/tests.yml)
-[![PHP 8.3+](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://www.php.net)
+[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4%2B-777BB4?logo=php&logoColor=white)](https://www.php.net)
 [![Laravel 13](https://img.shields.io/badge/Laravel-13-FF2D20?logo=laravel&logoColor=white)](https://laravel.com)
 [![Filament 5](https://img.shields.io/badge/Filament-5-FDAE4B)](https://filamentphp.com)
 [![License: MIT](https://img.shields.io/packagist/l/shipaurora/aurora)](LICENSE)
@@ -18,7 +18,7 @@ stays plain Laravel code.
 
 ## Requirements
 
-- PHP 8.3 or newer, with the GD or Imagick extension
+- PHP 8.4 or newer, with the GD or Imagick extension
 - Composer 2 and Node.js 20 or newer
 - A database: SQLite, MySQL/MariaDB or PostgreSQL
 
