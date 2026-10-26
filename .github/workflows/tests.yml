@@ -30,8 +30,11 @@ jobs:
           node-version: 22
           cache: npm
 
+      # The .env first: with no lock file, the install resolves the dependencies and runs
+      # post-update-cmd, whose boost:update needs the app's local environment.
       - name: Install dependencies
         run: |
+          cp .env.example .env
           composer install --prefer-dist --no-interaction --no-progress
           npm ci
 
@@ -40,9 +43,7 @@ jobs:
         run: npm run build
 
       - name: Set up the app
-        run: |
-          cp .env.example .env
-          php artisan key:generate
+        run: php artisan key:generate
 
       - name: Run the tests
         run: vendor/bin/pest
