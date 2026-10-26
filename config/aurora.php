@@ -90,6 +90,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Layouts
+    |--------------------------------------------------------------------------
+    |
+    | Where the site's page layouts defined in code live (Aurora\Layouts\
+    | PageLayout). Every layout class in this folder is offered to editors on
+    | its own, with the layouts added in the admin. php artisan
+    | make:aurora-layout creates new ones here. Set the path to null to
+    | register layouts by hand (Aurora\Support\Layouts::register()).
+    |
+    */
+
+    'layout_path' => app_path('Layouts'),
+
+    'layout_namespace' => null,
+
+    /*
+    |--------------------------------------------------------------------------
     | Website routes
     |--------------------------------------------------------------------------
     |
@@ -113,5 +130,41 @@ return [
     */
 
     'translations_path' => env('AURORA_TRANSLATIONS_PATH'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Media library
+    |--------------------------------------------------------------------------
+    |
+    | The largest file the media library takes, in megabytes: images, and
+    | everything else (videos, PDFs). Images are resized into several sizes,
+    | so keep theirs modest. PHP's upload_max_filesize and post_max_size, and
+    | the web server's own limit (client_max_body_size on nginx), must allow
+    | as much, or larger uploads fail before they reach Aurora.
+    |
+    */
+
+    'media' => [
+        'max_image_mb' => env('AURORA_MAX_IMAGE_MB', 10),
+        'max_file_mb' => env('AURORA_MAX_FILE_MB', 50),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | AI apps (MCP)
+    |--------------------------------------------------------------------------
+    |
+    | The account the local MCP server acts as (php artisan mcp:start cms),
+    | and the public address Claude's custom connectors reach the CMS on:
+    | they connect from Anthropic's cloud, so a .test domain won't do (use a
+    | tunnel such as `herd share` in development). An app's own
+    | services.mcp settings win over these.
+    |
+    */
+
+    'mcp' => [
+        'local_user' => env('MCP_USER'),
+        'public_url' => env('MCP_PUBLIC_URL'),
+    ],
 
 ];
