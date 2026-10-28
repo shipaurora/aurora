@@ -6,6 +6,36 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /*
+     * The brand and accent colours blocks paint with (bg-brand-600, text-accent-700): Aurora's
+     * own, until editors choose the site's under Settings › Website › Branding, which replaces
+     * them on the website and in the visual editor (aurora::partials.brand-palette). Plain
+     * @theme, not inline, so that replacing them works.
+     */
+    --color-brand-50: oklch(0.969 0.016 285);
+    --color-brand-100: oklch(0.943 0.03 285);
+    --color-brand-200: oklch(0.894 0.058 285);
+    --color-brand-300: oklch(0.811 0.104 285);
+    --color-brand-400: oklch(0.709 0.165 285);
+    --color-brand-500: oklch(0.606 0.222 285);
+    --color-brand-600: oklch(0.541 0.246 285);
+    --color-brand-700: oklch(0.471 0.226 285);
+    --color-brand-800: oklch(0.398 0.185 285);
+    --color-brand-900: oklch(0.343 0.148 285);
+    --color-brand-950: oklch(0.243 0.106 285);
+
+    --color-accent-50: oklch(0.984 0.019 190);
+    --color-accent-100: oklch(0.953 0.051 190);
+    --color-accent-200: oklch(0.91 0.093 190);
+    --color-accent-300: oklch(0.855 0.138 190);
+    --color-accent-400: oklch(0.789 0.154 190);
+    --color-accent-500: oklch(0.704 0.14 190);
+    --color-accent-600: oklch(0.6 0.118 190);
+    --color-accent-700: oklch(0.511 0.096 190);
+    --color-accent-800: oklch(0.437 0.078 190);
+    --color-accent-900: oklch(0.386 0.063 190);
+    --color-accent-950: oklch(0.277 0.046 190);
 }
 
 /*
