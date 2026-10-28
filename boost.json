@@ -19,6 +19,7 @@
         "scout-development",
         "tailwindcss-development",
         "aurora-development",
+        "aurora-netflex",
         "aurora-porting",
         "aurora-statamic"
     ]
